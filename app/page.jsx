@@ -168,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Companies" className="bg-[#fafafa] w-full mt-52 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:py-16">
+      <section id="Companies" className="bg-[#fafafa] w-full mt-24 sm:mt-56 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:py-16">
   <div>
     <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
       Companies We Work With
