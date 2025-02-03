@@ -1,32 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
     <section className="bg-[#FAFAFA]">
-      <div className="flex flex-wrap items-center justify-center lg:justify-between space-y-10 lg:space-y-0 p-10 sm:p-4">
-        <div className="left flex flex-col justify-between items-center space-y-10">
+      <div className="flex flex-wrap items-center justify-center lg:justify-between space-y-10 lg:space-y-0 p-8 md:p-16 lg:p-24">
+        {/* Left Section */}
+        <div className="flex flex-col items-center space-y-10">
           <div>
             <Link href="/" className="flex items-center rtl:space-x-reverse">
               <Image src="/Ellipse 87.png" width={20} height={20} alt="Ellipse" />
-              <Image
-                src="/Polygon 1.png"
-                width={20}
-                height={20}
-                alt="Polygon"
-              />
+              <Image src="/Polygon 1.png" width={20} height={20} alt="Polygon" />
               <span className="self-center font-[Helvetica] text-3xl font-bold whitespace-nowrap dark:text-white">
                 Embrace
               </span>
             </Link>
           </div>
-          <div className="links flex justify-between space-x-10 sm:flex-col sm:space-x-0 sm:space-y-4">
+          <div className="flex justify-between space-x-8 md:space-x-10">
             <Link href="https://www.instagram.com/accounts/login/" target="_blank">
               <FontAwesomeIcon className="text-[#3461FF] w-6 h-6" icon={faInstagram} />
             </Link>
@@ -38,58 +30,40 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <button className="bg-[#3461FF] text-white px-12 py-3 rounded-full mt-5 hover:bg-blue-600 transition sm:px-6 sm:py-2 sm:text-sm">
+            <button className="bg-[#3461FF] text-white px-12 py-3 rounded-full mt-5 hover:bg-blue-600 transition">
               Contact Us
             </button>
           </div>
         </div>
-        <div className="right grid grid-cols-3 gap-16 text-[#000000] sm:grid-cols-1 sm:text-center sm:space-y-8">
+
+        {/* Right Section */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-[#000000]">
           <div className="space-y-8">
-            <p>
-              <a href="">Work With Us</a>
-            </p>
-            <p>
-              <a href="">Advertise With Us</a>
-            </p>
-            <p>
-              <a href="">Support Us</a>
-            </p>
-            <p>
-              <a href="">Business Advices</a>
-            </p>
+            <p><a href="">Work With Us</a></p>
+            <p><a href="">Advertise With Us</a></p>
+            <p><a href="">Support Us</a></p>
+            <p><a href="">Business Advices</a></p>
           </div>
           <div className="space-y-8">
-            <p>
-              <a href="">Private Coaching</a>
-            </p>
-            <p>
-              <a href="#ourwork">Our Work</a>
-            </p>
-            <p>
-              <a href="">Our Commitment</a>
-            </p>
-            <p>
-              <a href="#team">Our Team</a>
-            </p>
+            <p><a href="">Private Coaching</a></p>
+            <p><a href="#ourwork">Our Work</a></p>
+            <p><a href="">Our Commitment</a></p>
+            <p><a href="#team">Our Team</a></p>
           </div>
           <div className="space-y-8">
-            <p>
-              <a href="">About Us</a>
-            </p>
-            <p>
-              <a href="#faq">FAQs</a>
-            </p>
-            <p>
-              <a href="">Report a Bug</a>
-            </p>
+            <p><a href="">About Us</a></p>
+            <p><a href="#faq">FAQs</a></p>
+            <p><a href="">Report a Bug</a></p>
           </div>
         </div>
       </div>
-      <div className="bg-black text-white flex justify-between py-10 px-14 text-sm items-center sm:px-4 sm:py-6 sm:flex-col sm:text-center sm:space-y-4">
+
+      {/* Bottom Section */}
+      <div className="bg-black text-white flex flex-col md:flex-row justify-between py-10 px-8 md:px-14 text-sm items-center">
         <div>
           <p>© 2022 Embrace, Inc. - All Rights Reserved</p>
         </div>
-        <div className="flex space-x-14 sm:space-x-0 sm:space-y-4">
+        <div className="flex space-x-14 mt-4 md:mt-0">
           <p>Terms of use</p>
           <p>Privacy policy</p>
         </div>
