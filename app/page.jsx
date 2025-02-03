@@ -86,7 +86,7 @@ export default function Home() {
           <div className="md:w-1/2 flex justify-center md:justify-center mt-10 md:mt-0 relative">
             <div className="relative flex items-center justify-center space-y-2">
               <div className="relative">
-                <div className="absolute -top-[13.5rem] right-20 w-64">
+                <div className="absolute hidden xl:block -top-[13.5rem] right-20 w-64">
                   <Image
                     src="/person1.png"
                     alt="Person 1"
