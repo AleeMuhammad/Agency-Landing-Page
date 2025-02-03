@@ -65,7 +65,7 @@ export default function Home() {
       <section id="hero" className="bg-white p-2 md:p-28">
         <div className="container mx-auto px-6 md:px-12 lg:px-36 py-16 flex justify-center flex-col md:flex-row items-center">
         <div className="xl:w-1/2 text-center md:text-left p-4">
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-4">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
         We Take <br className="hidden lg:block"/> Care Of <br className="hidden lg:block"/> Your Brand
       </h1>
       <p className="text-gray-600 text-sm sm:text-base mb-6">
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="md:w-1/2 flex justify-center md:justify-center mt-10 md:mt-0 relative">
             <div className="relative flex items-center justify-center space-y-2">
-              <div className="relative hidden xl:block ">
+              <div className="relative">
                 <div className="absolute -top-[13.5rem] right-20 w-64">
                   <Image
                     src="/person1.png"
@@ -173,7 +173,7 @@ export default function Home() {
 
       <section id="Companies" className="bg-[#fafafa] w-full px-4 py-8 sm:px-8 sm:py-16">
   <div>
-    <h1 className="text-center font-medium text-xl sm:text-2xl md:text-3xl mt-2">
+    <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
       Companies We Work With
     </h1>
   </div>
@@ -530,7 +530,7 @@ export default function Home() {
                 <div key={index} className=" rounded-lg">
                   <span className=" block h-[0.1rem] w-full rounded-md bg-[#D7D7D7]"></span>
                   <button
-                    className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-medium text-[#000000] transition"
+                    className="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-medium transition"
                     onClick={() => toggleFAQ(index)}
                   >
                     <span className="mt-3">{faq.question}</span>

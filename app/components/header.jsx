@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/" className="flex items-center rtl:space-x-reverse">
             <Image src="/Ellipse 87.png" width={12} height={20} alt="Ellipse" />
             <Image src="/Polygon 1.png" width={12} height={20} alt="Polygon" />
-            <span className="self-center font-[Helvetica] text-2xl font-bold whitespace-nowrap">
+            <span className="self-center font-[Helvetica] text-black text-2xl font-bold whitespace-nowrap">
               Embrace
             </span>
           </Link>
