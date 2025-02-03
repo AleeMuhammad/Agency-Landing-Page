@@ -63,15 +63,15 @@ export default function Home() {
     <div>
       {/* Section 1*/}
       <section id="hero" className="bg-white p-2 md:p-28">
-        <div className="container mx-auto px-6 md:px-12 lg:px-36 py-16 flex justify-center flex-col md:flex-row items-center">
-        <div className="xl:w-1/2 text-center md:text-left p-4">
+        <div className="container  px-6 md:px-12 lg:px-36 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
+        <div className="w-full xl:w-1/2 text-center lg:text-left px-4 py-6">
       <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
         We Take <br className="hidden lg:block"/> Care Of <br className="hidden lg:block"/> Your Brand
       </h1>
       <p className="text-gray-600 text-sm sm:text-base mb-6">
         We care about our work and we care about our clients.
       </p>
-      <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
+      <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
         <input
           type="email"
           placeholder="Enter Your Email"
@@ -82,11 +82,9 @@ export default function Home() {
         </button>
       </div>
     </div>
-
-          <div className="md:w-1/2 flex justify-center md:justify-center mt-10 md:mt-0 relative">
-            <div className="relative flex items-center justify-center space-y-2">
-              <div className="relative hidden xl:block ">
-                <div className="absolute -top-[13.5rem] right-20 w-64">
+          <div className="xl:w-1/2 flex  md:justify-center mt-10 md:mt-0 ">
+              <div className="relative  ml-[13.5rem]  md:ml-[13rem] xl:ml-0 ">
+                <div className="absolute -top-[13.5rem] right-20 w-48 sm:w-64">
                   <Image
                     src="/person1.png"
                     alt="Person 1"
@@ -95,7 +93,7 @@ export default function Home() {
                     className="rounded-full w-[100rem]"
                   />
                 </div>
-                <div className="absolute -top-[13.6rem] -right-28 w-48 ">
+                <div className="absolute -top-[13.6rem] sm:-right-28 -right-12 w-32 sm:w-48 ">
                   <Image
                     src="/person2.png"
                     alt="Person 2"
@@ -104,7 +102,7 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className="absolute -top-[3.05rem]  right-40 w-44 ">
+                <div className="absolute sm:-top-[3.05rem]  sm:right-40 right-[9rem] -top-[5.6rem] w-32 sm:w-44 ">
                   <Image
                     src="/Rectangle 201.png"
                     alt="Person 3"
@@ -113,10 +111,10 @@ export default function Home() {
                     className="rounded-full"
                   />
                 </div>
-                <div className=" absolute -top-5  right-[7.5rem] w-40 ">
+                <div className=" absolute sm:-top-5  sm:right-[7.5rem] -top-16 right-[11.6rem] w-12 sm:w-40 ">
                   <Image src="/Pencil.png" alt="Pencil" width={70} height={9} />
                 </div>
-                <div className=" absolute -top-12 -right-32  w-72 ">
+                <div className=" absolute sm:-top-12 sm:-right-32 -top-[5.6rem] -right-12 w-48 sm:w-72 ">
                   <Image
                     src="/Rectangle 202.png"
                     alt="Person 5"
@@ -125,7 +123,7 @@ export default function Home() {
                   />
                 </div>
 
-                <div className=" absolute top-[5.6rem] right-40  w-44 ">
+                <div className=" absolute sm:top-[5.6rem] sm:right-40 right-36 top-3 w-32 sm:w-44 ">
                   <Image
                     src="/Ellipse 84.png"
                     alt="Person 4"
@@ -133,7 +131,7 @@ export default function Home() {
                     height={90}
                   />
                 </div>
-                <div className=" absolute top-[5.5rem] right-[1.6rem]  w-[8.45rem] ">
+                <div className=" absolute sm:top-[5.5rem] sm:right-[1.6rem] right-[2.7rem] w-[6.3rem] top-2 sm:w-[8.45rem] ">
                   <Image
                     src="/Rectangle 204.png"
                     alt="Rectangle "
@@ -141,7 +139,7 @@ export default function Home() {
                     height={90}
                   />
                 </div>
-                <div className=" absolute top-[7.5rem] right-[3.3rem]  w-20 ">
+                <div className=" absolute sm:top-[7.5rem] sm:right-[3.3rem] top-[2.5rem] right-[4.4rem] w-12  sm:w-20 ">
                   <Image
                     src="/Laptop.png"
                     alt="Rectangle "
@@ -149,7 +147,7 @@ export default function Home() {
                     height={90}
                   />
                 </div>
-                <div className=" absolute top-[5.5rem] -right-[6.8rem]  w-[8.45rem] ">
+                <div className=" absolute sm:top-[5.5rem] sm:-right-[6.8rem] top-2 -right-[3.6rem]  w-[6.3rem] sm:w-[8.45rem] ">
                   <Image
                     src="/Rectangle 205.png"
                     alt="Rectangle "
@@ -157,7 +155,7 @@ export default function Home() {
                     height={90}
                   />
                 </div>
-                <div className=" absolute top-[7.5rem] -right-[5rem]  w-20 ">
+                <div className=" absolute sm:top-[7.5rem] top-[2.6rem] sm:-right-[5rem] -right-8 w-12  sm:w-20 ">
                   <Image
                     src="/crown.png"
                     alt="Rectangle "
@@ -166,12 +164,11 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="Companies" className="bg-[#fafafa] w-full px-4 py-8 sm:px-8 sm:py-16">
+      <section id="Companies" className="bg-[#fafafa] w-full mt-52 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:py-16">
   <div>
     <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
       Companies We Work With
@@ -237,7 +234,7 @@ export default function Home() {
   {/* Right Side (Heading & Text) */}
   <div className="right space-y-6 text-center lg:text-start lg:mt-20">
     <h1 className="font-medium text-5xl">Commitments</h1>
-    <p className="text-[#686868] w-full">
+    <p className="text-[#686868] w-full p-2">
       We are committed to working with you collaboratively to understand
       your goals and create a strategy that will achieve them.
     </p>
