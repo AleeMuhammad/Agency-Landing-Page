@@ -168,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Companies" className="bg-[#fafafa] w-full mt-20 sm:mt-56 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:py-16">
+      <section id="Companies" className="bg-[#fafafa] w-full mt-20 sm:mt-56 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:pt-16 sm:pb-12">
   <div>
     <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
       Companies We Work With
@@ -262,7 +262,7 @@ export default function Home() {
       {/* Section 4*/}
       <section
   id="howitworks"
-  className="flex flex-wrap justify-center items-center p-8 sm:p-16 lg:p-24 space-y-10 lg:space-x-20"
+  className="flex flex-wrap justify-center items-center p-8 sm:p-16 lg:p-12 space-y-10 lg:space-x-20"
 >
   {/* Left Section */}
   <div className="space-y-8 text-center lg:text-left w-full lg:w-auto">
@@ -304,7 +304,7 @@ export default function Home() {
 
 
       {/* Section 5*/}
-      <section id="ourwork">
+      <section id="ourwork" className="mt-4">
         <div className="text-center space-y-4">
           <h1 className="font-medium text-5xl">Our Work</h1>
           <p className="text-[#686868] text-sm">A glimpse of our portfolio</p>
@@ -418,7 +418,7 @@ export default function Home() {
 </section>
      
 
-      <section id="team" className="flex flex-wrap space-y-10 lg:space-y-0 justify-around p-10 lg:p-20">
+      <section id="team" className="flex flex-wrap-reverse space-y-10 lg:space-y-0 justify-around p-10 lg:p-20">
         <div className="grid grid-cols-3 gap-y-6 gap-x-6">
           <Image src="/M1.png" alt="member1" width={170} height={20} />
           <Image src="/M2.png" alt="member1" width={170} height={20} />
@@ -436,7 +436,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <button className="bg-[#3461FF] p-3 mt-5 text-white rounded-3xl w-40 text-lg">
+            <button className="bg-[#3461FF] p-3 mt-5 mb-3 text-white rounded-3xl w-40 text-lg">
               Learn More
             </button>
           </div>
