@@ -62,9 +62,9 @@ export default function Home() {
   return (
     <div>
       {/* Section 1*/}
-      <section id="hero" className="bg-white p-2 md:p-28">
-        <div className="container  px-6 md:px-12 lg:px-36 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
-        <div className="w-full xl:w-1/2 text-center lg:text-left px-4 pt-6">
+      <section id="hero" className="bg-white p-2 md:p-28 lg:p-24">
+        <div className="container  px-6 md:px-12 lg:px-4 xl:px-16 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
+        <div className="w-full lg:w-1/2 text-center lg:text-left px-8 pt-6">
       <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
         We Take <br className="hidden lg:block"/> Care Of <br className="hidden lg:block"/> Your Brand
       </h1>
@@ -82,8 +82,8 @@ export default function Home() {
         </button>
       </div>
     </div>
-          <div className="xl:w-1/2 flex  md:justify-center  md:mt-0 ">
-              <div className="relative  ml-[13.5rem]  md:ml-[13rem] xl:ml-0 ">
+          <div className="lg:w-1/2 flex  md:justify-center  md:mt-0 ">
+              <div className="relative ml-[13.5rem]  md:ml-[13rem] xl:ml-0 ">
                 <div className="absolute -top-[13.5rem] right-20 w-48 sm:w-64">
                   <Image
                     src="/person1.png"
@@ -427,7 +427,7 @@ export default function Home() {
           <Image src="/M5.png" alt="member1" width={170} height={20} />
           <Image src="/M6.png" alt="member1" width={170} height={20} />
         </div>
-        <div className="right flex text-center  md:text-start flex-wrap space-y-5 lg:space-y-0 flex-col justify-between p-4 w-[28rem]">
+        <div className="right flex text-center  xl:text-start flex-wrap space-y-5 lg:space-y-0 flex-col justify-between p-4 xl:w-[28rem]">
           <div className="space-y-6">
             <h1 className="font-medium text-5xl">Meet Our Team</h1>
             <p className=" text-[#686868] text-sm">
@@ -550,7 +550,7 @@ export default function Home() {
               <span className=" block h-[0.1rem] w-full rounded-md bg-[#D7D7D7]"></span>
             </div>
           </div>
-          <div className="right lg:w-[22rem] text-center  w-full">
+          <div className="right lg:w-[21rem] text-center  w-full">
             <div className="space-y-3">
               <h1 className="font-medium text-3xl">How We Can Help You? </h1>
               <p className="text-[#afa9a9]">
