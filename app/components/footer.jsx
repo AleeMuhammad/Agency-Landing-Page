@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center rtl:space-x-reverse">
               <Image src="/Ellipse 87.png" width={20} height={20} alt="Ellipse" />
               <Image src="/Polygon 1.png" width={20} height={20} alt="Polygon" />
-              <span className="self-center font-[Helvetica] text-3xl font-bold whitespace-nowrap dark:text-white">
+              <span className="self-center font-[Helvetica] text-3xl font-bold whitespace-nowrap text-black">
                 Embrace
               </span>
             </Link>
