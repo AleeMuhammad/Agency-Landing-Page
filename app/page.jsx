@@ -373,17 +373,36 @@ export default function Home() {
 
       {/* Section 6*/}
       <section className="p-8 sm:p-16 lg:p-28 flex flex-wrap justify-center relative">
-  <div className="bg-[#3561ff] rounded-3xl text-white flex flex-wrap justify-between items-center p-7 sm:p-10 lg:p-20 w-full lg:w-[70rem] h-auto lg:h-[19rem] relative overflow-hidden">
+  <div className="bg-[#3561ff] rounded-3xl text-white flex flex-wrap justify-between items-center p-7 sm:p-10 lg:p-20 w-full lg:w-[70rem] h-[16rem] lg:h-[19rem] relative overflow-hidden">
 
     {/* Left Section */}
-    <div className="w-full lg:w-[30rem] mb-6 lg:mb-0">
+    <div className="w-full lg:w-[30rem] mb-14 lg:mb-0">
     <h1 className="text-3xl sm:text-4xl block lg:hidden  text-white lg:text-6xl font-medium text-center lg:text-left">
         Elevate Your Brand Today!
       </h1>
+<div className="hidden lg:block">
+<div className="absolute lg:bottom-[0rem] lg:left-[3rem]">
+<Image className="" src="/Ellipse3.png" width={377} height={300} alt="ellipse"/>
+</div>
+<div className="absolute top-[0rem] right-[41.5rem] lg:top-[0rem] lg:-left-[0.5rem] rounded-full ">
+<Image src="/Ellipse2.png" className="rounded-xl" width={230} height={20} alt="ellipse" />
+</div>
+<div className="absolute -top-[1rem] right-[53rem] lg:bottom-[0.5rem] lg:-left-[0.5rem]">
+<Image className="" src="/Ellipse1.png" width={50} height={80} alt="ellipse"/>
+</div>
+<div className="absolute top-[0rem] right-[18rem] lg:bottom-[0rem] lg:left-[14rem]">
+<Image className="" src="/Ellipse4.png" width={377} height={300} alt="ellipse"/>
+</div>
+<div className="absolute w-full lg:w-[30rem] top-[2rem] right-[0rem] lg:top-[5rem] lg:left-[4.5rem] ">
+<h1 className="text-3xl sm:text-4xl text-white lg:text-6xl font-medium text-center lg:text-left">
+  Elevate Your Brand Today!
+</h1>
+</div>
+</div>
     </div>
 
     {/* Right Section */}
-    <div className=" w-full lg:w-[21rem] space-y-6 text-center lg:text-left">
+    <div className=" w-full absolute top-[8rem] lg:top-[6rem] right-[0rem] lg:right-[1rem] lg:w-[21rem] space-y-6 text-center lg:text-left">
       <p className="font-[GeneralSansVariable] text-sm sm:text-base">
         Ready to transform your digital presence? Let's create magic together!
         Book our services now!
@@ -394,26 +413,7 @@ export default function Home() {
     </div>
   </div>
 
-  <div className="hidden lg:block">
 
-      <div className="absolute bottom-[7rem] left-[16rem]">
-      <Image className="" src="/Ellipse3.png" width={377} height={300} alt="ellipse"/>
-      </div>
-      <div className="absolute top-[7rem] left-[12.5rem] rounded-full ">
-      <Image src="/Ellipse2.png" className="rounded-xl" width={230} height={20} alt="ellipse" />
-    </div>
-    <div className="absolute bottom-[7.5rem] left-[12.5rem]">
-      <Image className="" src="/Ellipse1.png" width={50} height={80} alt="ellipse"/>
-      </div>
-      <div className="absolute bottom-[7rem] left-[27rem]">
-      <Image className="" src="/Ellipse3.png" width={377} height={300} alt="ellipse"/>
-      </div>
-      <div className="absolute w-full lg:w-[30rem] top-[12rem] left-[20rem] ">
-      <h1 className="text-3xl sm:text-4xl text-white lg:text-6xl font-medium text-center lg:text-left">
-        Elevate Your Brand Today!
-      </h1>
-    </div>
-  </div>
 
 </section>
      
@@ -443,7 +443,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials">
+      <section id="testimonials" className="mt-10">
         <div className="p-3 lg:p-12  space-y-4">
           <div className="flex flex-wrap items-center justify-around">
             <div>

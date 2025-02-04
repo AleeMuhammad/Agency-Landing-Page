@@ -39,21 +39,21 @@ export default function Footer() {
         {/* Right Section */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-[#000000]">
           <div className="space-y-8">
-            <p><a href="">Work With Us</a></p>
-            <p><a href="">Advertise With Us</a></p>
-            <p><a href="">Support Us</a></p>
-            <p><a href="">Business Advices</a></p>
+            <p><Link href="#">Work With Us</Link></p>
+            <p><Link href="">Advertise With Us</Link></p>
+            <p><Link href="">Support Us</Link></p>
+            <p><Link href="">Business Advices</Link></p>
           </div>
           <div className="space-y-8">
-            <p><a href="">Private Coaching</a></p>
-            <p><a href="#ourwork">Our Work</a></p>
-            <p><a href="">Our Commitment</a></p>
-            <p><a href="#team">Our Team</a></p>
+            <p><Link href="">Private Coaching</Link></p>
+            <p><Link href="#ourwork">Our Work</Link></p>
+            <p><Link href="#Commitments">Our Commitment</Link></p>
+            <p><Link href="#team">Our Team</Link></p>
           </div>
           <div className="space-y-8">
-            <p><a href="">About Us</a></p>
-            <p><a href="#faq">FAQs</a></p>
-            <p><a href="">Report a Bug</a></p>
+            <p><Link href="#Companies">About Us</Link></p>
+            <p><Link href="#faq">FAQs</Link></p>
+            <p><Link href="">Report a Bug</Link></p>
           </div>
         </div>
       </div>

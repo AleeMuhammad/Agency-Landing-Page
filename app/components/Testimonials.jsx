@@ -28,12 +28,12 @@ export default function Testimonials({ scrollContainerRef }) {
   return (
     <div
       ref={scrollContainerRef}
-      className="flex flex-wrap lg:flex-nowrap space-y-5 justify-center lg:justify-start  lg:space-x-6  md:overflow-hidden p-6  lg:ml-32"
+      className="flex flex-wrap lg:flex-nowrap space-y-5 justify-center lg:justify-start  sm:space-x-6  md:overflow-hidden p-6 sm:items-end  lg:ml-32"
     >
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className={`p-8 rounded-3xl w-80 lg:w-[28rem] h-72 flex-shrink-0 shadow-sm ${testimonial.bgColor}`}
+          className={`p-8 rounded-3xl w-80 lg:w-[28rem]  h-72 flex-shrink-0 shadow-sm ${testimonial.bgColor}`}
         >
           <div className="flex items-center space-x-4 mb-4">
             <img
