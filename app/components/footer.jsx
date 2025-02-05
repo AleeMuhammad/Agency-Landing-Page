@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg
 export default function Footer() {
   return (
     <section className="bg-[#FAFAFA]">
-      <div className="flex flex-wrap items-center justify-center lg:justify-between space-y-10 lg:space-y-0 p-8 md:p-16 lg:p-24">
+      <div className="flex flex-wrap items-center justify-center lg:justify-between space-x-8 space-y-10 lg:space-y-0 p-8 md:p-16 lg:p-24">
         {/* Left Section */}
         <div className="flex flex-col items-center space-y-10">
           <div>
@@ -30,9 +30,11 @@ export default function Footer() {
             </Link>
           </div>
           <div>
+            <Link href="/contactus">
             <button className="bg-[#3461FF] text-white px-12 py-3 rounded-full mt-5 hover:bg-blue-600 transition">
               Contact Us
             </button>
+            </Link>
           </div>
         </div>
 

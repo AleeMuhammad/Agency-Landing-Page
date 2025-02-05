@@ -14,6 +14,7 @@ import {
   faArrowTrendUp,
 } from "@fortawesome/free-solid-svg-icons";
 import Testimonials from "./components/Testimonials";
+import Link from "next/link";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -62,246 +63,249 @@ export default function Home() {
   return (
     <div>
       {/* Section 1*/}
-      <section id="hero" className="bg-white p-2 md:p-28 lg:p-24">
+      <section id="hero" className="bg-white p-2 md:p-20 lg:p-16">
         <div className="container  px-6 md:px-12 lg:px-4 xl:px-16 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
-        <div className="w-full lg:w-1/2 text-center lg:text-left px-8 pt-6">
-      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
-        We Take <br className="hidden lg:block"/> Care Of <br className="hidden lg:block"/> Your Brand
-      </h1>
-      <p className="text-gray-600 text-sm sm:text-base mb-6">
-        We care about our work and we care about our clients.
-      </p>
-      <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
-        <input
-          type="email"
-          placeholder="Enter Your Email"
-          className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-56 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
-          Lets Talk
-        </button>
-      </div>
-    </div>
+          <div className="w-full lg:w-1/2 text-center lg:text-left px-8 pt-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
+              We Take <br className="hidden lg:block" /> Care Of{" "}
+              <br className="hidden lg:block" /> Your Brand
+            </h1>
+            <p className="text-gray-600 text-sm sm:text-base mb-6">
+              We care about our work and we care about our clients.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
+              <input
+                type="email"
+                placeholder="Enter Your Email"
+                className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-56 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
+                Lets Talk
+              </button>
+            </div>
+          </div>
           <div className="lg:w-1/2 flex  md:justify-center  md:mt-0 ">
-              <div className="relative ml-[13.5rem]  md:ml-[13rem] xl:ml-0 ">
-                <div className="absolute -top-[13.5rem] right-20 w-48 sm:w-64">
-                  <Image
-                    src="/person1.png"
-                    alt="Person 1"
-                    width={200}
-                    height={200}
-                    className="rounded-full w-[100rem]"
-                  />
-                </div>
-                <div className="absolute -top-[13.6rem] sm:-right-28 -right-12 w-32 sm:w-48 ">
-                  <Image
-                    src="/person2.png"
-                    alt="Person 2"
-                    width={175}
-                    height={9}
-                    className="rounded-full"
-                  />
-                </div>
-                <div className="absolute sm:-top-[3.05rem]  sm:right-40 right-[9rem] -top-[5.6rem] w-32 sm:w-44 ">
-                  <Image
-                    src="/Rectangle 201.png"
-                    alt="Person 3"
-                    width={175}
-                    height={9}
-                    className="rounded-full"
-                  />
-                </div>
-                <div className=" absolute sm:-top-5  sm:right-[7.5rem] -top-16 right-[11.6rem] w-12 sm:w-40 ">
-                  <Image src="/Pencil.png" alt="Pencil" width={70} height={9} />
-                </div>
-                <div className=" absolute sm:-top-12 sm:-right-32 -top-[5.6rem] -right-12 w-48 sm:w-72 ">
-                  <Image
-                    src="/Rectangle 202.png"
-                    alt="Person 5"
-                    width={265}
-                    height={90}
-                  />
-                </div>
-
-                <div className=" absolute sm:top-[5.6rem] sm:right-40 right-36 top-3 w-32 sm:w-44 ">
-                  <Image
-                    src="/Ellipse 84.png"
-                    alt="Person 4"
-                    width={200}
-                    height={90}
-                  />
-                </div>
-                <div className=" absolute sm:top-[5.5rem] sm:right-[1.6rem] right-[2.7rem] w-[6.3rem] top-2 sm:w-[8.45rem] ">
-                  <Image
-                    src="/Rectangle 204.png"
-                    alt="Rectangle "
-                    width={184}
-                    height={90}
-                  />
-                </div>
-                <div className=" absolute sm:top-[7.5rem] sm:right-[3.3rem] top-[2.5rem] right-[4.4rem] w-12  sm:w-20 ">
-                  <Image
-                    src="/Laptop.png"
-                    alt="Rectangle "
-                    width={180}
-                    height={90}
-                  />
-                </div>
-                <div className=" absolute sm:top-[5.5rem] sm:-right-[6.8rem] top-2 -right-[3.6rem]  w-[6.3rem] sm:w-[8.45rem] ">
-                  <Image
-                    src="/Rectangle 205.png"
-                    alt="Rectangle "
-                    width={184}
-                    height={90}
-                  />
-                </div>
-                <div className=" absolute sm:top-[7.5rem] top-[2.6rem] sm:-right-[5rem] -right-8 w-12  sm:w-20 ">
-                  <Image
-                    src="/crown.png"
-                    alt="Rectangle "
-                    width={180}
-                    height={90}
-                  />
-                </div>
+            <div className="relative ml-[13.5rem]  md:ml-[13rem] xl:ml-0 ">
+              <div className="absolute -top-[13.5rem] right-20 w-48 sm:w-64">
+                <Image
+                  src="/person1.png"
+                  alt="Person 1"
+                  width={200}
+                  height={200}
+                  className="rounded-full w-[100rem]"
+                />
               </div>
+              <div className="absolute -top-[13.6rem] sm:-right-28 -right-12 w-32 sm:w-48 ">
+                <Image
+                  src="/person2.png"
+                  alt="Person 2"
+                  width={175}
+                  height={9}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="absolute sm:-top-[3.05rem]  sm:right-40 right-[9rem] -top-[5.6rem] w-32 sm:w-44 ">
+                <Image
+                  src="/Rectangle 201.png"
+                  alt="Person 3"
+                  width={175}
+                  height={9}
+                  className="rounded-full"
+                />
+              </div>
+              <div className=" absolute sm:-top-5  sm:right-[7.5rem] -top-16 right-[11.6rem] w-12 sm:w-40 ">
+                <Image src="/Pencil.png" alt="Pencil" width={70} height={9} />
+              </div>
+              <div className=" absolute sm:-top-12 sm:-right-32 -top-[5.6rem] -right-12 w-48 sm:w-72 ">
+                <Image
+                  src="/Rectangle 202.png"
+                  alt="Person 5"
+                  width={265}
+                  height={90}
+                />
+              </div>
+
+              <div className=" absolute sm:top-[5.6rem] sm:right-40 right-36 top-3 w-32 sm:w-44 ">
+                <Image
+                  src="/Ellipse 84.png"
+                  alt="Person 4"
+                  width={200}
+                  height={90}
+                />
+              </div>
+              <div className=" absolute sm:top-[5.5rem] sm:right-[1.6rem] right-[2.7rem] w-[6.3rem] top-2 sm:w-[8.45rem] ">
+                <Image
+                  src="/Rectangle 204.png"
+                  alt="Rectangle "
+                  width={184}
+                  height={90}
+                />
+              </div>
+              <div className=" absolute sm:top-[7.5rem] sm:right-[3.3rem] top-[2.5rem] right-[4.4rem] w-12  sm:w-20 ">
+                <Image
+                  src="/Laptop.png"
+                  alt="Rectangle "
+                  width={180}
+                  height={90}
+                />
+              </div>
+              <div className=" absolute sm:top-[5.5rem] sm:-right-[6.8rem] top-2 -right-[3.6rem]  w-[6.3rem] sm:w-[8.45rem] ">
+                <Image
+                  src="/Rectangle 205.png"
+                  alt="Rectangle "
+                  width={184}
+                  height={90}
+                />
+              </div>
+              <div className=" absolute sm:top-[7.5rem] top-[2.6rem] sm:-right-[5rem] -right-8 w-12  sm:w-20 ">
+                <Image
+                  src="/crown.png"
+                  alt="Rectangle "
+                  width={180}
+                  height={90}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="Companies" className="bg-[#fafafa] w-full mt-20 sm:mt-56 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:pt-16 sm:pb-12">
-  <div>
-    <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
-      Companies We Work With
-    </h1>
-  </div>
-  {/* Grid Layout */}
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-center justify-center gap-4 sm:gap-6 mt-6">
-    <div className="flex justify-center">
-      <Image src="/Spotify-Logo.png" alt="Spotify logo" width={120} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/Google.png" alt="Google" width={100} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/Uber.png" alt="Uber" width={70} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/microsoft.png" alt="Microsoft" width={140} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/shopify.png" alt="Shopify" width={110} height={40} />
-    </div>
-    {/* Second Row */}
-    <div className="flex justify-center">
-      <Image src="/evernote.png" alt="Evernote logo" width={120} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/adobe.png" alt="Adobe" width={100} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/paypal.png" alt="PayPal" width={130} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/amazon.png" alt="Amazon" width={90} height={40} />
-    </div>
-    <div className="flex justify-center">
-      <Image src="/asana.png" alt="Asana" width={110} height={40} />
-    </div>
-  </div>
-</section>
+      <section
+        id="Companies"
+        className="bg-[#fafafa] w-full mt-20 sm:mt-56 md:mt-32 lg:mt-0 px-4 py-8 sm:px-8 sm:pt-16 sm:pb-20"
+      >
+        <div>
+          <h1 className="text-center font-medium text-xl sm:text-2xl text-black md:text-3xl mt-2">
+            Companies We Work With
+          </h1>
+        </div>
+        {/* Grid Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-center justify-center gap-4 sm:gap-6 mt-6">
+          <div className="flex justify-center">
+            <Image
+              src="/Spotify-Logo.png"
+              alt="Spotify logo"
+              width={120}
+              height={40}
+            />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/Google.png" alt="Google" width={100} height={40} />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/Uber.png" alt="Uber" width={70} height={40} />
+          </div>
+          <div className="flex justify-center">
+            <Image
+              src="/microsoft.png"
+              alt="Microsoft"
+              width={140}
+              height={40}
+            />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/shopify.png" alt="Shopify" width={110} height={40} />
+          </div>
+          {/* Second Row */}
+          <div className="flex justify-center">
+            <Image
+              src="/evernote.png"
+              alt="Evernote logo"
+              width={120}
+              height={40}
+            />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/adobe.png" alt="Adobe" width={100} height={40} />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/paypal.png" alt="PayPal" width={130} height={40} />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/amazon.png" alt="Amazon" width={90} height={40} />
+          </div>
+          <div className="flex justify-center">
+            <Image src="/asana.png" alt="Asana" width={110} height={40} />
+          </div>
+        </div>
+      </section>
 
+      {/* Section 3*/}
+      <section
+        id="Commitments"
+        className="grid grid-cols-1 lg:grid-cols-2 lg:ml-16 lg:p-10"
+      >
+        {/* Left Side (Stats) */}
+        <div className="left grid grid-cols-1 text-center lg:text-start md:grid-cols-2 p-20 gap-y-14">
+          {[
+            { value: "245%", text: "More revenues for the brand" },
+            { value: "130K+", text: "Audiences reached" },
+            { value: "50+", text: "Brands trust us" },
+            { value: "24+", text: "Worldwide Awards" },
+          ].map((item, index) => (
+            <div key={index}>
+              <h1 className="font-semibold text-5xl">{item.value}</h1>
+              <p className="text-[#686868] mt-2">{item.text}</p>
+            </div>
+          ))}
+        </div>
 
-{/* Section 3*/}
-<section
-  id="Commitments"
-  className="grid grid-cols-1 lg:grid-cols-2 lg:ml-16 lg:p-10"
->
-  {/* Left Side (Stats) */}
-  <div className="left grid grid-cols-1 text-center lg:text-start md:grid-cols-2 p-20 gap-y-14">
-    {[
-      { value: "245%", text: "More revenues for the brand" },
-      { value: "130K+", text: "Audiences reached" },
-      { value: "50+", text: "Brands trust us" },
-      { value: "24+", text: "Worldwide Awards" },
-    ].map((item, index) => (
-      <div key={index}>
-        <h1 className="font-semibold text-5xl">{item.value}</h1>
-        <p className="text-[#686868] mt-2">{item.text}</p>
-      </div>
-    ))}
-  </div>
-
-  {/* Right Side (Heading & Text) */}
-  <div className="right space-y-6 text-center lg:text-start lg:mt-20">
-    <h1 className="font-medium text-5xl">Commitments</h1>
-    <p className="text-[#686868] w-full p-2">
-      We are committed to working with you collaboratively to understand
-      your goals and create a strategy that will achieve them.
-    </p>
-
-    {/* Button with Arrow Animation */}
-    <div className="flex items-center justify-center lg:justify-start space-x-1 cursor-pointer">
-      <button className="text-[#3461FF] mt-12 text-sm font-semibold">
-        Learn More
-      </button>
-      <Image
-        src="/arrow.png"
-        className="mt-12"
-        alt="arrow vector"
-        width={12}
-        height={2}
-      />
-    </div>
-  </div>
-</section>
-
-
-
-
+        {/* Right Side (Heading & Text) */}
+        <div className="right space-y-6 text-center lg:text-start lg:mt-20">
+          <h1 className="font-medium text-5xl">Commitments</h1>
+          <p className="text-[#686868] w-full p-2">
+            We are committed to working with you collaboratively to understand
+            your goals and create a strategy that will achieve them.
+          </p>
+        </div>
+      </section>
 
       {/* Section 4*/}
       <section
-  id="howitworks"
-  className="flex flex-wrap justify-center items-center p-8 sm:p-16 lg:p-12 space-y-10 lg:space-x-20"
->
-  {/* Left Section */}
-  <div className="space-y-8 text-center lg:text-left w-full lg:w-auto">
-    <div className="space-y-3">
-      <h1 className="font-medium text-3xl sm:text-4xl lg:text-5xl">How It Works</h1>
-      <p className="text-[#686868] max-w-md mx-auto lg:mx-0">
-        We believe that the best way to create successful marketing campaigns is to work closely with our clients to understand their goals and challenges.
-      </p>
-    </div>
-    <div className="flex justify-center lg:justify-start">
-      <Image src="/sec4.png" width={300} height={60} alt="img" />
-    </div>
-  </div>
+        id="howitworks"
+        className="flex flex-wrap justify-center items-center p-8 sm:p-16 lg:p-12 space-y-10 lg:space-x-20"
+      >
+        {/* Left Section */}
+        <div className="space-y-8 text-center lg:text-left w-full lg:w-auto">
+          <div className="space-y-3">
+            <h1 className="font-medium text-3xl sm:text-4xl lg:text-5xl">
+              How It Works
+            </h1>
+            <p className="text-[#686868] max-w-md mx-auto lg:mx-0">
+              We believe that the best way to create successful marketing
+              campaigns is to work closely with our clients to understand their
+              goals and challenges.
+            </p>
+          </div>
+          <div className="flex justify-center lg:justify-start">
+            <Image src="/sec4.png" width={300} height={60} alt="img" />
+          </div>
+        </div>
 
-  {/* Right Section - Cards */}
-  <div className="space-y-6 lg:w-auto">
-    <Card
-      title="Discovery"
-      text="We meet with you to learn about your business, your goals, and your target audience."
-      src="/icon.png"
-    />
-    <Card
-      title="Strategy"
-      text="We develop a customized marketing strategy that is based on your unique needs and goals."
-      src="/chess.png"
-    />
-    <Card
-      title="Execution"
-      text="We execute our strategy using the latest digital marketing tools and techniques."
-      src="/exe.png"
-    />
-    <Card
-      title="Measurement"
-      text="We track the results of our campaigns so that we can make adjustments as needed."
-      src="/measurement.png"
-    />
-  </div>
-</section>
-
+        {/* Right Section - Cards */}
+        <div className="space-y-6 lg:w-auto">
+          <Card
+            title="Discovery"
+            text="We meet with you to learn about your business, your goals, and your target audience."
+            src="/icon.png"
+          />
+          <Card
+            title="Strategy"
+            text="We develop a customized marketing strategy that is based on your unique needs and goals."
+            src="/chess.png"
+          />
+          <Card
+            title="Execution"
+            text="We execute our strategy using the latest digital marketing tools and techniques."
+            src="/exe.png"
+          />
+          <Card
+            title="Measurement"
+            text="We track the results of our campaigns so that we can make adjustments as needed."
+            src="/measurement.png"
+          />
+        </div>
+      </section>
 
       {/* Section 5*/}
       <section id="ourwork" className="mt-4">
@@ -373,52 +377,79 @@ export default function Home() {
 
       {/* Section 6*/}
       <section className="p-8 sm:p-16 lg:p-28 flex flex-wrap justify-center relative">
-  <div className="bg-[#3561ff] rounded-3xl text-white flex flex-wrap justify-between items-center p-7 sm:p-10 lg:p-20 w-full lg:w-[70rem] h-[16rem] lg:h-[19rem] relative overflow-hidden">
+        <div className="bg-[#3561ff] rounded-3xl text-white flex flex-wrap justify-between items-center p-7 sm:p-10 lg:p-20 w-full lg:w-[70rem] h-[16rem] lg:h-[19rem] relative overflow-hidden">
+          {/* Left Section */}
+          <div className="w-full lg:w-[30rem] mb-14 lg:mb-0">
+            <h1 className="text-3xl sm:text-4xl block lg:hidden  text-white lg:text-6xl font-medium text-center lg:text-left">
+              Elevate Your Brand Today!
+            </h1>
+            <div className="hidden lg:block">
+              <div className="absolute lg:bottom-[0rem] lg:left-[3rem]">
+                <Image
+                  className=""
+                  src="/Ellipse3.png"
+                  width={377}
+                  height={300}
+                  alt="ellipse"
+                />
+              </div>
+              <div className="absolute top-[0rem] right-[41.5rem] lg:top-[0rem] lg:-left-[0.5rem] rounded-full ">
+                <Image
+                  src="/Ellipse2.png"
+                  className="rounded-xl"
+                  width={230}
+                  height={20}
+                  alt="ellipse"
+                />
+              </div>
+              <div className="absolute -top-[1rem] right-[53rem] lg:bottom-[0.5rem] lg:-left-[0.5rem]">
+                <Image
+                  className=""
+                  src="/Ellipse1.png"
+                  width={50}
+                  height={80}
+                  alt="ellipse"
+                />
+              </div>
+              <div className="absolute top-[0rem] right-[18rem] lg:bottom-[0rem] lg:left-[14rem]">
+                <Image
+                  className=""
+                  src="/Ellipse4.png"
+                  width={377}
+                  height={300}
+                  alt="ellipse"
+                />
+              </div>
+              <div className="absolute w-full lg:w-[30rem] top-[2rem] right-[0rem] lg:top-[5rem] lg:left-[4.5rem] ">
+                <h1 className="text-3xl sm:text-4xl text-white lg:text-6xl font-medium text-center lg:text-left">
+                  Elevate Your Brand Today!
+                </h1>
+              </div>
+            </div>
+          </div>
 
-    {/* Left Section */}
-    <div className="w-full lg:w-[30rem] mb-14 lg:mb-0">
-    <h1 className="text-3xl sm:text-4xl block lg:hidden  text-white lg:text-6xl font-medium text-center lg:text-left">
-        Elevate Your Brand Today!
-      </h1>
-<div className="hidden lg:block">
-<div className="absolute lg:bottom-[0rem] lg:left-[3rem]">
-<Image className="" src="/Ellipse3.png" width={377} height={300} alt="ellipse"/>
-</div>
-<div className="absolute top-[0rem] right-[41.5rem] lg:top-[0rem] lg:-left-[0.5rem] rounded-full ">
-<Image src="/Ellipse2.png" className="rounded-xl" width={230} height={20} alt="ellipse" />
-</div>
-<div className="absolute -top-[1rem] right-[53rem] lg:bottom-[0.5rem] lg:-left-[0.5rem]">
-<Image className="" src="/Ellipse1.png" width={50} height={80} alt="ellipse"/>
-</div>
-<div className="absolute top-[0rem] right-[18rem] lg:bottom-[0rem] lg:left-[14rem]">
-<Image className="" src="/Ellipse4.png" width={377} height={300} alt="ellipse"/>
-</div>
-<div className="absolute w-full lg:w-[30rem] top-[2rem] right-[0rem] lg:top-[5rem] lg:left-[4.5rem] ">
-<h1 className="text-3xl sm:text-4xl text-white lg:text-6xl font-medium text-center lg:text-left">
-  Elevate Your Brand Today!
-</h1>
-</div>
-</div>
-    </div>
+          {/* Right Section */}
+          <div className=" w-full absolute top-[8rem] lg:top-[6rem] right-[0rem] lg:right-[1rem] lg:w-[21rem] space-y-6 text-center lg:text-left">
+            <p className="font-[GeneralSansVariable] text-sm sm:text-base">
+              Ready to transform your digital presence? Let's create magic
+              together! Book our services now!
+            </p>
+            <Link href="/contactus"
+            >
+            <button
+              className="bg-white mt-3 p-3 text-black rounded-3xl w-40 font-medium text-base"
+              >
+              Book Call
+            </button>
+              </Link>
+          </div>
+        </div>
+      </section>
 
-    {/* Right Section */}
-    <div className=" w-full absolute top-[8rem] lg:top-[6rem] right-[0rem] lg:right-[1rem] lg:w-[21rem] space-y-6 text-center lg:text-left">
-      <p className="font-[GeneralSansVariable] text-sm sm:text-base">
-        Ready to transform your digital presence? Let's create magic together!
-        Book our services now!
-      </p>
-      <button className="bg-white p-3 text-black rounded-3xl w-40 font-medium text-base">
-        Book Call
-      </button>
-    </div>
-  </div>
-
-
-
-</section>
-     
-
-      <section id="team" className="flex flex-wrap-reverse space-y-10 lg:space-y-0 justify-around p-10 lg:p-20">
+      <section
+        id="team"
+        className="flex flex-wrap-reverse space-y-10 lg:space-y-0 justify-around p-10 lg:p-20"
+      >
         <div className="grid grid-cols-3 gap-y-6 gap-x-6">
           <Image src="/M1.png" alt="member1" width={170} height={20} />
           <Image src="/M2.png" alt="member1" width={170} height={20} />
@@ -434,11 +465,6 @@ export default function Home() {
               Discover the brilliance behind Embrace. Our team blends innovation
               and artistry to craft digital wonders that captivate
             </p>
-          </div>
-          <div>
-            <button className="bg-[#3461FF] p-3 mt-5 mb-3 text-white rounded-3xl w-40 text-lg">
-              Learn More
-            </button>
           </div>
         </div>
       </section>
@@ -499,17 +525,14 @@ export default function Home() {
                 <br />
                 With Us Now
               </h1>
-              {/* Button */}
-              <div className="relative mt-6 ">
-                <button className="bg-[#3461FF] text-white px-9 py-3 rounded-full mt-5 hover:bg-blue-600 transition">
-                  Start Now
-                </button>
-              </div>
             </div>
 
             {/* Icon Section */}
             <div className="flex justify-center items-center bg-[#d0ff38] rounded-full w-20 h-20 md:w-56 md:h-56">
-              <FontAwesomeIcon icon={faBolt} className="text-[#3461FF] h-7 md:h-20 " />
+              <FontAwesomeIcon
+                icon={faBolt}
+                className="text-[#3461FF] h-7 md:h-20 "
+              />
               <FontAwesomeIcon
                 icon={faArrowTrendUp}
                 className="text-[#3461FF] h-7 md:w-[5.5rem] md:h-44"
@@ -567,18 +590,6 @@ export default function Home() {
               <button className="bg-blue-600 text-white px-6 py-3 rounded-full ">
                 Lets Talk
               </button>
-            </div>
-            <div className="flex items-center justify-center lg:justify-start space-x-2 cursor-pointer">
-              <button className="text-[#3461FF] mt-20 text-sm font-semibold underline">
-                More FAQ
-              </button>
-              <Image
-                src="/arrow.png"
-                className="mt-20"
-                alt="arrow vector"
-                width={12}
-                height={2}
-              />
             </div>
           </div>
         </div>
