@@ -315,9 +315,9 @@ export default function Home() {
         </div>
 
         <div className="grid lg:grid-cols-3 justify-items-center gap-y-12 p-10">
-          <Brands title="Apple" src="/Apple.png" />
-          <Brands title="Coca-Cola" src="/cola.png" />
-          <Brands title="Nike" src="/nike.png" />
+          <Brands title="Apple" src="/Apple.png" alt="Apple" />
+          <Brands title="Coca-Cola" src="/cola.png" alt="Coca-Col" />
+          <Brands title="Nike" src="/nike.png" alt="Nike" />
 
           <AnimatePresence>
             {isOpen && (
@@ -330,7 +330,8 @@ export default function Home() {
                 >
                   <Brands
                     title="The North Face"
-                    src="/northface.jpg"
+                    src="/northface.webp"
+                    alt="The North Face"
                     className="rounded-[2rem] h-[17.7rem]"
                   />
                 </motion.div>
@@ -343,7 +344,8 @@ export default function Home() {
                 >
                   <Brands
                     title="Pepsi"
-                    src="/pepsi.jpg"
+                    src="/pepsi.webp"
+                    alt="Pepsi"
                     className="rounded-[2rem] h-[17.7rem]"
                   />
                 </motion.div>
@@ -356,7 +358,8 @@ export default function Home() {
                 >
                   <Brands
                     title="Puma"
-                    src="/puma.jpg"
+                    alt="Puma"
+                    src="/puma.webp"
                     className="rounded-[2rem] h-[17.7rem]"
                   />
                 </motion.div>
