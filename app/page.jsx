@@ -92,7 +92,7 @@ export default function Home() {
       <section id="hero" className="bg-white p-2 md:p-20 lg:p-16">
         <ToastContainer/>
         <div className="container  px-6 md:px-12 lg:px-4 xl:px-16 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
-          <div className="w-full lg:w-1/2 text-center lg:text-left xl:px-16 pt-6">
+          <div className="w-full lg:w-1/2 text-center  lg:text-left xl:px-16 pt-6">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
               We Take <br className="hidden lg:block" /> Care Of{" "}
               <br className="hidden lg:block" /> Your Brand
@@ -101,14 +101,14 @@ export default function Home() {
               We care about our work and we care about our clients.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
-              <form className="space-x-5" action="">
+              <form className="space-x-5 space-y-3" action="">
 
               <input
                 type="email"
                 value={email}
                 placeholder="Enter Your Email"
                 onChange={(e)=>setEmail(e.target.value)}
-                className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 bg-[#f0eded] rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               <button type="button" onClick={handleClick} className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
                 Lets Talk
@@ -617,14 +617,19 @@ export default function Home() {
               </p>
             </div>
             <div className="space-x-4 flex flex-wrap space-y-4 lg:space-y-0 justify-center lg:justify-start items-end mt-3">
-              <input
-                type="email"
-                className="bg-[#f3ecec] p-[0.9rem] w-full lg:w-fit rounded-full text-sm"
-                placeholder="Enter Your Email"
-              />
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-full ">
-                Lets Talk
-              </button>
+            <form className="space-x-5 space-y-3" action="">
+
+<input
+  type="email"
+  value={email}
+  placeholder="Enter Your Email"
+  onChange={(e)=>setEmail(e.target.value)}
+  className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+<button type="button" onClick={handleClick} className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
+  Lets Talk
+</button>
+  </form>
             </div>
           </div>
         </div>
