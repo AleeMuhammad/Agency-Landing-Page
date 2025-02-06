@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import the styles
+
 
 export default function ContactForm() {
   const [message, setMessage] = useState([]);
@@ -17,7 +20,7 @@ export default function ContactForm() {
   const onSubmit = (data) => {
     console.log("Form Data:", data);
     // setMessage(data);
-    alert("Form submitted successfully!");
+    // alert("Form submitted successfully!");
     // localStorage.setItem("messages", JSON.stringify(data));
 
     emailjs
@@ -35,11 +38,11 @@ export default function ContactForm() {
       )
       .then(
         (response) => {
-          alert("Email sent successfully!", response.status, response.text);
+          toast.success("Email sent successfully!", response.status, response.text);
           reset();
         },
         (error) => {
-          alert("Email sending failed:", error);
+          toast.error("Error occurred!", error);
         }
       );
 
@@ -48,6 +51,7 @@ export default function ContactForm() {
       "service_82b257f", 
       "template_9lfv97g",
       {
+        from_name:"Embrace team",
         to_name: data.name,
         user_email: data.email, 
         message:data.message
@@ -56,10 +60,10 @@ export default function ContactForm() {
     )
     .then(
       (response) => {
-        console.log("Confirmation email sent successfully!", response.status, response.text);
+        toast.success("Confirmation email sent successfully!", response.status, response.text);
       },
       (error) => {
-        console.error("Confirmation email sending failed:", error);
+        toast.error("Confirmation email sending failed:", error);
       }
     );
       
@@ -67,6 +71,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-[20rem] sm:w-[30rem] p-4 border rounded-lg shadow-lg">
+      <ToastContainer/>
       <div className="mb-4">
         <label className="block text-gray-700 font-bold mb-2">Name</label>
         <input
