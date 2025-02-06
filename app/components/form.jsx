@@ -7,67 +7,55 @@ import 'react-toastify/dist/ReactToastify.css'; // Import the styles
 
 
 export default function ContactForm() {
-  const [message, setMessage] = useState([]);
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors,isSubmitting },
   } = useForm({
     mode: "onChange",
   });
 
-  const onSubmit = (data) => {
-    console.log("Form Data:", data);
-    // setMessage(data);
-    // alert("Form submitted successfully!");
-    // localStorage.setItem("messages", JSON.stringify(data));
-
-    emailjs
-      .send(
+  const onSubmit = async (data) => { 
+    try {
+      console.log("Form Data:", data);
+  
+      await emailjs.send(
         "service_82b257f",
-        "template_mzxssbb", 
+        "template_mzxssbb",
         {
-          to_name: "Ali Muhammad",  
+          to_name: "Ali Muhammad",
           from_name: data.name,
-          message: data.message, 
-          from_email: data.email, 
-          from_phone: data.phone, 
+          message: data.message,
+          from_email: data.email,
+          from_phone: data.phone,
         },
         "z4sKljaNDvX4Bjnj-"
-      )
-      .then(
-        (response) => {
-          toast.success("Email sent successfully!", response.status, response.text);
-          reset();
-        },
-        (error) => {
-          toast.error("Error occurred!", error);
-        }
       );
-
-    emailjs
-    .send(
-      "service_82b257f", 
-      "template_9lfv97g",
-      {
-        from_name:"Embrace team",
-        to_name: data.name,
-        user_email: data.email, 
-        message:data.message
-      },
-      "z4sKljaNDvX4Bjnj-" 
-    )
-    .then(
-      (response) => {
-        toast.success("Confirmation email sent successfully!", response.status, response.text);
-      },
-      (error) => {
-        toast.error("Confirmation email sending failed:", error);
-      }
-    );
-      
+  
+      toast.success("Email sent successfully!");
+  
+      await emailjs.send(
+        "service_82b257f",
+        "template_9lfv97g",
+        {
+          from_name: "Embrace team",
+          to_name: data.name,
+          user_email: data.email,
+          message: data.message,
+        },
+        "z4sKljaNDvX4Bjnj-"
+      );
+  
+      toast.success("Confirmation email sent successfully!");
+  
+      reset(); 
+    } catch (error) {
+      console.error("Email sending error:", error);
+      toast.error("Error occurred while sending email.");
+    }
   };
+  
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-[20rem] sm:w-[30rem] p-4 border rounded-lg shadow-lg">
@@ -123,8 +111,8 @@ export default function ContactForm() {
         {errors.message && <span className="text-red-500">{errors.message.message}</span>}
       </div>
 
-      <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
-        Submit
+      <button disabled={isSubmitting} type="submit" className={`w-full p-2 rounded hover:bg-blue-600 ${isSubmitting?"opacity-80 cursor-not-allowed":" bg-blue-500 text-white"}`}>
+      {isSubmitting?"Submitting...":"Submit"}
       </button>
     </form>
   );

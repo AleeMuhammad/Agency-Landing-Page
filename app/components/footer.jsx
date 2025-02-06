@@ -63,7 +63,7 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="bg-black text-white flex flex-col md:flex-row justify-between py-10 px-8 md:px-14 text-sm items-center">
         <div>
-          <p>© 2022 Embrace, Inc. - All Rights Reserved</p>
+          <p>© 2025 Embrace, Inc. - All Rights Reserved</p>
         </div>
         <div className="flex space-x-14 mt-4 md:mt-0">
           <p>Terms of use</p>

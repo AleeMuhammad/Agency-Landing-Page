@@ -19,7 +19,8 @@ import Testimonials from "./components/Testimonials";
 import Link from "next/link";
 
 export default function Home() {
-  const [email,setEmail]=useState("")
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,33 +65,38 @@ export default function Home() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const handleClick=(e)=>{
+  const handleClick = async (e) => {
     e.preventDefault();
-    emailjs
-    .send(
-      "service_82b257f", 
-      "template_9lfv97g",
-      {
-        from_name:"Embrace team",
-        user_email: email, 
-      },
-      "z4sKljaNDvX4Bjnj-" 
-    )
-    .then(
-      (response) => {
-        toast.success("Confirmation email sent successfully!");
-      },
-      (error) => {
-        toast.error(`Failed to send email: ${error.text}`);
-      }
-    );
-       setEmail("")
-  }
+    setLoading(true);
+    try {
+      await emailjs
+      .send(
+        "service_82b257f",
+        "template_9lfv97g",
+        {
+          from_name: "Embrace team",
+          user_email: email,
+        },
+        "z4sKljaNDvX4Bjnj-"
+      )
+      toast.success("Confirmation email sent successfully!");
+
+    } catch (error) {
+      toast.error("Failed to send email");
+
+    }finally{
+      setLoading(false)
+      setEmail("");
+
+    }
+    
+
+  };
   return (
     <div>
       {/* Section 1*/}
       <section id="hero" className="bg-white p-2 md:p-20 lg:p-16">
-        <ToastContainer/>
+        <ToastContainer  />
         <div className="container  px-6 md:px-12 lg:px-4 xl:px-16 py-16 flex flex-wrap justify-center flex-col md:flex-row items-center space-y-64 lg:space-y-0">
           <div className="w-full lg:w-1/2 text-center  lg:text-left xl:px-16 pt-6">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-black leading-tight mb-4">
@@ -102,18 +108,50 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
               <form className="sm:space-x-5 space-y-3" action="">
-
-              <input
-                type="email"
-                value={email}
-                placeholder="Enter Your Email"
-                onChange={(e)=>setEmail(e.target.value)}
-                className="px-4 py-2 bg-[#f0eded] rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                <input
+                  type="email"
+                  value={email}
+                  placeholder="Enter Your Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="px-4 py-2 bg-[#f0eded] rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-              <button type="button" onClick={handleClick} className="bg-blue-600 w-full sm:w-fit text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
-                Lets Talk
-              </button>
-                </form>
+                <button
+                  type="button"
+                  onClick={handleClick}
+                  className={`bg-blue-600 w-full sm:w-fit text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition ${
+                    loading ? "opacity-80 cursor-not-allowed  bg-gray-400" : ""
+                  }`}
+                  disabled={loading} 
+                >
+                  {loading ? (
+                    <>
+                      <svg
+                        className="w-5 h-5 animate-spin text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0L8 4l4 4V4a8 8 0 01-8 8H0l4 4 4-4H4z"
+                        ></path>
+                      </svg>
+                      
+                    </>
+                  ) : (
+                    "Let's Talk"
+                  )}
+                </button>
+              </form>
             </div>
           </div>
           <div className="lg:w-1/2 flex  md:justify-center  md:mt-0 ">
@@ -469,14 +507,11 @@ export default function Home() {
               Ready to transform your digital presence? Let's create magic
               together! Book our services now!
             </p>
-            <Link href="/contactus"
-            >
-            <button
-              className="bg-white mt-3 p-3 text-black rounded-3xl w-40 font-medium text-base"
-              >
-              Book Call
-            </button>
-              </Link>
+            <Link href="/contactus">
+              <button className="bg-white mt-3 p-3 text-black rounded-3xl w-40 font-medium text-base">
+                Book Call
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -617,19 +652,51 @@ export default function Home() {
               </p>
             </div>
             <div className="space-x-4 flex flex-wrap space-y-4 lg:space-y-0 justify-center lg:justify-start items-end mt-3">
-            <form className="space-x-5 space-y-3" action="">
-
-<input
-  type="email"
-  value={email}
-  placeholder="Enter Your Email"
-  onChange={(e)=>setEmail(e.target.value)}
-  className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
-<button type="button" onClick={handleClick} className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
-  Lets Talk
-</button>
-  </form>
+              <form className="space-x-5 space-y-3" action="">
+                <input
+                  type="email"
+                  value={email}
+                  placeholder="Enter Your Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="px-4 py-2 rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+               <button
+                  type="button"
+                  onClick={handleClick}
+                  className={`bg-blue-600 w-full sm:w-fit text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition ${
+                    loading ? "opacity-80 cursor-not-allowed  bg-gray-400" : ""
+                  }`}
+                  disabled={loading} 
+                >
+                  {loading ? (
+                    <>
+                      <svg
+                        className="w-5 h-5 animate-spin text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0L8 4l4 4V4a8 8 0 01-8 8H0l4 4 4-4H4z"
+                        ></path>
+                      </svg>
+                      
+                    </>
+                  ) : (
+                    "Let's Talk"
+                  )}
+                </button>
+              </form>
             </div>
           </div>
         </div>
