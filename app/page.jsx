@@ -101,7 +101,7 @@ export default function Home() {
               We care about our work and we care about our clients.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-2">
-              <form className="space-x-5 space-y-3" action="">
+              <form className="sm:space-x-5 space-y-3" action="">
 
               <input
                 type="email"
@@ -110,7 +110,7 @@ export default function Home() {
                 onChange={(e)=>setEmail(e.target.value)}
                 className="px-4 py-2 bg-[#f0eded] rounded-3xl border text-sm w-full sm:w-64 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-              <button type="button" onClick={handleClick} className="bg-blue-600 text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
+              <button type="button" onClick={handleClick} className="bg-blue-600 w-full sm:w-fit text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition">
                 Lets Talk
               </button>
                 </form>
