@@ -142,14 +142,14 @@ export default function ContactForm() {
       const result = await res.json();
 
       if (res.ok) {
-        toast.success("✅ Email sent successfully!");
+        toast.success("Email sent successfully!");
         reset();
       } else {
-        toast.error(result.error || "❌ Failed to send email.");
+        toast.error(result.error || "Failed to send email.");
       }
     } catch (error) {
       console.error("Error:", error);
-      toast.error("⚠️ Something went wrong. Try again!");
+      toast.error("Something went wrong. Try again!");
     }
   };
 

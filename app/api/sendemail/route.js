@@ -6,9 +6,10 @@ export async function POST(req) {
 
     // Create transporter for Outlook / custom SMTP
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: Number(process.env.EMAIL_PORT),
-      secure: Number(process.env.EMAIL_PORT) === 465, // true for SSL
+        service:"gmail",
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false, // true for SSL
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -20,7 +21,7 @@ export async function POST(req) {
 
     // 📩 Email to company owner
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: "Aquatic Star",
       to: process.env.RECEIVER_EMAIL,
       subject: `📬 New Message from ${name}`,
       html: `
@@ -39,9 +40,9 @@ export async function POST(req) {
 
     // 📧 Confirmation email to sender
     await transporter.sendMail({
-      from: `"Embrace Team" <${process.env.EMAIL_USER}>`,
+      from: `"Aquatic Star Team" <${process.env.EMAIL_USER}>`,
       to: email,
-      subject: "✅ We received your message!",
+      subject: "We received your message!",
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; background:#f8f9fa; padding:20px; border-radius:10px;">
           <h2>Thank you, ${name}!</h2>
